@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD Nusantara Islamic School - Membangun Generasi Berakhlak Mulia</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            scroll-behavior: smooth;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: #F3EEDC;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #8B4513;
+            font-weight: bold;
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 25px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+.gallery-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.gallery-section .section-title {
+  font-size: 2.2rem;
+  color: #8B4513;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.gallery-section .section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+}
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(139,69,19,0.9) 0%, rgba(160,82,45,0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23F3EEDC" width="1200" height="600"/><circle fill="%23EDE4D3" cx="200" cy="150" r="80"/><circle fill="%23EDE4D3" cx="800" cy="400" r="60"/><circle fill="%23EDE4D3" cx="1000" cy="200" r="40"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #8B4513;
+            padding-top: 80px;
+            background: #ffffff 
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #F3EEDC;
+            color: #8B4513;
+            box-shadow: 0 4px 15px rgba(243,238,220,0.3);
+        }
+
+        .btn-primary:hover {
+            background: #EDE4D3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(243,238,220,0.4);
+        }
+
+        .btn-secondary {
+            background: #F3EEDC;
+            color: #8B4513;
+            box-shadow: 0 4px 15px rgba(243,238,220,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #EDE4D3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(243,238,220,0.4);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #F3EEDC;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #F3EEDC 0%, #EDE4D3 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #8B4513;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 100px 0;
+            background: #F3EEDC;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .program-image {
+            height: 200px;
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .program-content {
+            padding: 30px;
+        }
+
+        .program-content h3 {
+            font-size: 1.3rem;
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .program-content p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-form {
+            background: #F3EEDC;
+            padding: 50px 40px;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #8B4513;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139,69,19,0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #F3EEDC;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: #F3EEDC;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #8B4513;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #F3EEDC;
+            color: #8B4513;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37,211,102,0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-menu a {
+                display: block;
+                width: 100%;
+                padding: 15px 20px;
+                border-radius: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                height: 70px;
+            }
+
+            .logo-text h1 {
+                font-size: 16px;
+            }
+
+            .logo-text p {
+                font-size: 10px;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <nav class="nav-container">
+    <div class="logo">
+     <div class="logo-icon"><img id="school-logo" src="https://lh3.googleusercontent.com/d/1m9ukdH5ksufI2KAmU4rmSs-AQnSOJtsK" alt="Logo Sekolah" onerror="this.style.display='none'; this.parentElement.innerHTML='🕌';">
+     </div>
+     <div class="logo-text">
+      <h1 id="school-name">SD Nusantara Islamic School</h1>
+      <p id="tagline">Membangun Generasi Berakhlak Mulia, Cerdas, dan Berkebinekaan Global </p>
+     </div>
+    </div>
+    <ul class="nav-menu">
+     <li><a href="#home">Beranda</a></li>
+     <li><a href="#about">Profil</a></li>
+     <li><a href="#programs">Program</a></li>
+     <li><a href="#gallery">Galeri</a></li>
+     <li><a href="#contact">Kontak</a></li>
+    </ul><button class="mobile-menu-btn"> <i class="fas fa-bars"></i> </button>
+   </nav>
+  </header><!-- Hero Section -->
+  <section id="home" class="hero">
+   <div class="hero-container">
+    <h1 id="hero-title">Selamat Datang di SD Nusantara Islamic School</h1>
+    <p id="hero-subtitle">“Terwujudnya Warga Belajar yang Beriman dan Bertakwa, Berakhlak Mulia, Mandiri, Kreatif, Berkebinekaan Global serta Unggul Dalam Prestasi”</p>
+    <div class="cta-buttons"><a href="#contact" class="btn btn-primary" id="cta-button">Daftar Sekarang</a> <a href="#about" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+    </div>
+   </div>
+</section><!-- Features Section -->
+
+<section class="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sambutan Kepala Sekolah<br>SD Nusantara Islamic School</h2>
+    </div>
+      <div class="feature-card">
+        <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+        <p>
+          Puji syukur kita panjatkan ke hadirat Allah SWT atas segala limpahan rahmat dan karunia-Nya.
+          SD Nusantara Islamic School berkomitmen memberikan pendidikan Islam yang berkualitas, membentuk 
+          generasi yang berakhlak mulia, cerdas, dan berwawasan global.
+        </p>
+        <p>
+          Melalui pembelajaran yang ramah anak, lingkungan yang islami, serta dukungan tenaga pendidik yang profesional,
+          kami berharap dapat menjadi sekolah yang terpercaya bagi orang tua dalam membimbing putra-putri tercinta.
+        </p>
+        <p>
+          Terima kasih atas kepercayaan dan dukungan semua pihak. Semoga Allah SWT senantiasa memberikan kemudahan
+          dan keberkahan dalam setiap langkah kita.
+        </p>
+        <br>
+        <h3>Wassalamu’alaikum Warahmatullahi Wabarakatuh</h3><br><br>
+        <strong>Kepala Sekolah</strong><br>
+        <em>(Wahyu Hidayat)</em>
+      </div>
+    </div>
+  </div>
+</section>
+  </section><!-- About Section -->
+  <section id="about" class="about">
+   <div class="container">
+    <div class="about-content">
+     <div class="about-text">
+      <h2>SD Nusantara Islamic School</h2>
+      <h3>Visi :</h3>
+        <p>“Terwujudnya Warga Belajar yang Beriman dan Bertakwa, Berakhlak Mulia, Mandiri, Kreatif, Berkebinekaan Global serta Unggul Dalam Prestasi”</p>
+
+        <h3>Misi :</h3>
+        <ol>
+            <li>1. Mewujudkan peserta didik beriman dan takwa kepada Tuhan Yang Maha Esa melalui penanaman nilai-nilai spiritual keagamaan baik di sekolah maupun di luar sekolah.</li>
+            <li>2. Membangun lingkungan sekolah yang membentuk peserta didik memiliki akhlak mulia melalui rutinitas sikap dan perilaku religius dalam berintegrasi di sekolah maupun di luar sekolah.</li>
+            <li>3. Mengembangkan budaya literasi, rasa ingin tahu, bertoleransi, bekerja sama, saling menghargai, disiplin, jujur, kerja keras, kreatif, dan inovatif.</li>
+            <li>4. Mengembangkan nilai kecerdasan, cinta ilmu dan keingintahuan peserta didik dalam bidang akademik, maupun non akademik.</li>
+            <li>5. Menciptakan suasana pendidikan yang menantang, menyenangkan, komunikatif, yang terintegrasi, dengan pembelajaran abad 21.</li>
+            <li>5. Mengembangkan dan memfasilitasi peningkatan prestasi peserta didik sesuai minat dan bakatnya melalui proses pendampingan dan kerja sama dengan orang tua.</li>
+        </ol>
+        </div>
+     <div class="about-image">
+      <div class="about-image-placeholder"><img src="images/foto1.jpg" alt="Foto SD Nusantara Islamic School">
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Programs Section -->
+  <section id="programs" class="programs">
+   <div class="container">
+    <div class="section-title">
+     <h2>Program Pendidikan Unggulan</h2>
+    </div>
+    <div class="programs-grid">
+     <div class="program-card">
+      <div class="program-image"><i class="fas fa-book-open"></i>
+      </div>
+      <div class="program-content">
+       <h3>Program Tahfidz Al-Quran</h3>
+       <p>Program unggulan untuk menghafal Al-Quran dengan metode yang menyenangkan dan mudah dipahami oleh anak-anak. Target minimal 5 juz selama 6 tahun.</p>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-image"><i class="fas fa-microscope"></i>
+      </div>
+      <div class="program-content">
+       <h3>STEM Education</h3>
+       <p>Program Science, Technology, Engineering, and Mathematics yang terintegrasi untuk mengembangkan kemampuan berpikir kritis dan inovatif siswa.</p>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-image"><i class="fas fa-palette"></i>
+      </div>
+      <div class="program-content">
+       <h3>Ekstrakurikuler Beragam</h3>
+       <p>Berbagai pilihan ekstrakurikuler seperti seni, olahraga, robotika, dan kaligrafi untuk mengembangkan bakat dan minat siswa.</p>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-image"><i class="fas fa-hands-helping"></i>
+      </div>
+      <div class="program-content">
+       <h3>Character Building</h3>
+       <p>Program pembentukan karakter melalui pembiasaan akhlak mulia, kepemimpinan, dan kepedulian sosial dalam kehidupan sehari-hari.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+   <section id="gallery" class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Galeri SD Nusantara Islamic School</h2>
+        <p class="section-subtitle">Dokumentasi kegiatan sekolah, prestasi siswa, dan suasana lingkungan sekolah.</p>
+
+        <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/foto1.jpg" alt="Kegiatan 1"></div>
+        <div class="gallery-item"><img src="images/foto2.jpg" alt="Kegiatan 2"></div>
+        <div class="gallery-item"><img src="images/foto3.jpg" alt="Kegiatan 3"></div>
+        <div class="gallery-item"><img src="images/foto4.jpg" alt="Kegiatan 4"></div>
+        <div class="gallery-item"><img src="images/foto5.jpg" alt="Kegiatan 5"></div>
+        </div>
+    </div>
+    </section>
+  </section><!-- Contact Section -->
+  <section id="contact" class="contact">
+   <div class="container">
+    <div class="section-title">
+     <h2>Hubungi Kami</h2>
+    </div>
+    <div class="contact-content">
+     <div class="contact-info">
+      <h3>Informasi Kontak</h3>
+      <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+       <div><strong>Alamat</strong><br><span id="school-address">Jl. Burangkeng Raya, Rt 01/02, Kecamatan Setu, Kabupaten Bekasi, Jawa Barat</span>
+       </div>
+      </div>
+      <div class="contact-item"><i class="fas fa-phone"></i>
+       <div><strong>Telepon</strong><br><span id="school-phone">(021) 1234-5678</span>
+       </div>
+      </div>
+      <div class="contact-item"><i class="fas fa-envelope"></i>
+       <div><strong>Email</strong><br><span id="school-email">info@sdnusantara.sch.id</span>
+       </div>
+      </div>
+      <div class="contact-item"><i class="fas fa-clock"></i>
+       <div><strong>Jam Operasional</strong><br>
+         Senin - Jumat: 07.00 - 15.00
+       </div>
+      </div>
+      <div class="social-links"><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a> <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+     </div>
+     
+
+    <div class="contact-map">
+        <h4>Lokasi Sekolah</h4>
+        <div style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4428237135035!2d107.01633137453288!3d-6.336641861998573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69915b7c0a75fd%3A0xaa119627b3c8e5f5!2sSD%20NUSANTARA%20ISLAMIC%20SCHOOL!5e0!3m2!1sen!2sid!4v1764218737595!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>SD Nusantara Islamic School</h3>
+      <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi berakhlak mulia, cerdas, dan berwawasan global.</p>
+      <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-youtube"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Menu Utama</h3>
+      <p><a href="#home">Beranda</a></p>
+      <p><a href="#about">Profil Sekolah</a></p>
+      <p><a href="#programs">Program Pendidikan</a></p>
+      <p><a href="#contact">Kontak Kami</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Program Unggulan</h3>
+      <p><a href="#">Tahfidz Al-Quran</a></p>
+      <p><a href="#">STEM Education</a></p>
+      <p><a href="#">Character Building</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Informasi</h3>
+      <p><a href="#">Berita &amp; Pengumuman</a></p>
+      <p><a href="#">Fasilitas Sekolah</a></p>
+      <p><a href="#">Prestasi Siswa</a></p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2025 SD Nusantara Islamic School. All rights reserved.</p>
+    </div>
+   </div>
+  </footer><!-- WhatsApp Float Button --> <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat WhatsApp"> <i class="fab fa-whatsapp"></i> </a>
+  <script>
+        // Default configuration
+        const defaultConfig = {
+            school_name: "SD Nusantara Islamic School",
+            tagline: "Membangun Generasi Berakhlak Mulia, Cerdas, dan Berwawasan Global",
+            hero_title: "Selamat Datang di SD Nusantara Islamic School",
+            hero_subtitle: "Membangun Generasi Berakhlak Mulia, Cerdas, dan Berwawasan Global dengan Pendidikan Islam yang Berkualitas",
+            cta_button: "Daftar Sekarang",
+            school_address: "Jl. Burangkeng Raya, Rt 01/02, Kecamatan Setu, Kabupaten Bekasi, Jawa Barat",
+            school_phone: "(021) 1234-5678",
+            school_email: "info@sdnusantara.sch.id",
+            background_color: "#F3EEDC",
+            primary_color: "#8B4513",
+            accent_color: "#F3EEDC",
+            text_color: "#2c3e50",
+            surface_color: "#ffffff",
+            font_family: "Poppins",
+            font_size: 16
+        };
+
+        // Element SDK implementation
+        async function onConfigChange(config) {
+            // Update text content
+            const schoolNameEl = document.getElementById('school-name');
+            if (schoolNameEl) schoolNameEl.textContent = config.school_name || defaultConfig.school_name;
+
+            const taglineEl = document.getElementById('tagline');
+            if (taglineEl) taglineEl.textContent = config.tagline || defaultConfig.tagline;
+
+            const heroTitleEl = document.getElementById('hero-title');
+            if (heroTitleEl) heroTitleEl.textContent = config.hero_title || defaultConfig.hero_title;
+
+            const heroSubtitleEl = document.getElementById('hero-subtitle');
+            if (heroSubtitleEl) heroSubtitleEl.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+
+            const ctaButtonEl = document.getElementById('cta-button');
+            if (ctaButtonEl) ctaButtonEl.textContent = config.cta_button || defaultConfig.cta_button;
+
+            const schoolAddressEl = document.getElementById('school-address');
+            if (schoolAddressEl) schoolAddressEl.textContent = config.school_address || defaultConfig.school_address;
+
+            const schoolPhoneEl = document.getElementById('school-phone');
+            if (schoolPhoneEl) schoolPhoneEl.textContent = config.school_phone || defaultConfig.school_phone;
+
+            const schoolEmailEl = document.getElementById('school-email');
+            if (schoolEmailEl) schoolEmailEl.textContent = config.school_email || defaultConfig.school_email;
+
+            // Update colors
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+
+            document.documentElement.style.setProperty('--bg-color', backgroundColor);
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--accent-color', accentColor);
+            document.documentElement.style.setProperty('--text-color', textColor);
+            document.documentElement.style.setProperty('--surface-color', surfaceColor);
+
+            // Update font
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseFontStack = 'Arial, sans-serif';
+            document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+
+            // Update font sizes
+            const baseSize = config.font_size || defaultConfig.font_size;
+            document.documentElement.style.fontSize = `${baseSize}px`;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.surface_color || defaultConfig.surface_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ surface_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.setConfig({ accent_color: value });
+                            }
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: {
+                    get: () => config.font_family || defaultConfig.font_family,
+                    set: (value) => {
+                        if (window.elementSdk) {
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    }
+                },
+                fontSizeable: {
+                    get: () => config.font_size || defaultConfig.font_size,
+                    set: (value) => {
+                        if (window.elementSdk) {
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["school_name", config.school_name || defaultConfig.school_name],
+                ["tagline", config.tagline || defaultConfig.tagline],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["cta_button", config.cta_button || defaultConfig.cta_button],
+                ["school_address", config.school_address || defaultConfig.school_address],
+                ["school_phone", config.school_phone || defaultConfig.school_phone],
+                ["school_email", config.school_email || defaultConfig.school_email]
+            ]);
+        }
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Show success message
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Pesan Terkirim!';
+            submitBtn.style.background = '#28a745';
+            
+            // Reset form
+            this.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+            }, 3000);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(139, 69, 19, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #8B4513 0%, #A0522D 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMenu = document.querySelector('.nav-menu');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a4dd2cb1113fd07',t:'MTc2NDIwNjY0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
