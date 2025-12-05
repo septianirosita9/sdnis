@@ -372,6 +372,8 @@ html, body {
     color: white;
     padding: 50px;
     border-radius: 20px;
+    position: relative; 
+    z-index: 0;  
 }
 
 .contact-info h3 {
@@ -471,6 +473,8 @@ html, body {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    position: relative; /* pastikan posisi relatif */
+    z-index: 100;        /* pastikan di atas layer lain */
 }
 
 .social-links a {
@@ -482,6 +486,10 @@ html, body {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 10;
 }
 
 .social-links a:hover {
@@ -489,6 +497,7 @@ html, body {
     color: #8B4513;
     transform: translateY(-3px);
 }
+
 
 .footer-bottom {
     text-align: center;
