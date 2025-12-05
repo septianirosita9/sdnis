@@ -1,350 +1,638 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #F3EEDC;
-  color: #090909;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 5%;
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    scroll-behavior: smooth;
 }
 
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
+/* ===========================
+   Header & Navigation
+=========================== */
+.header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.navbar .logo img {
-  width: 50px;
-  height: 50px;
+.nav-container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
 
-.navbar ul {
-   list-style: none;
-  gap: 20px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.navbar a {
-  color: #090909;
-  text-decoration: none;
-  font-weight: 600;
-}
-.nav-links {
-  display: flex;
-  flex-direction: row; /* Biar menu sejajar ke samping di laptop */
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background: #F3EEDC;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo-text p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+.nav-menu.show {
+    display: flex !important;
+}
+/* ===========================
+   Hero Section
+=========================== */
 .hero {
-  background: url('../images/hero.jpg') no-repeat center center/cover;
-  color: #090909;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    height: 100vh;
+    color: #8B4513;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: white;
 }
 
-.hero-text {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
-.btn-primary {
-  display: inline-block;
-  background: #F3EEDC;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-footer {
-  text-align: center;
-  background: #F3EEDC;
-  color: black;
-  padding: 10px;
-}
-.content {
-  padding: 80px 5%;
-  text-align: center;
+.hero p {
+    font-size: 1.3rem;
+    margin: 20px auto 40px;
+    max-width: 800px;
 }
 
-.content h1 {
-  color: black;
-  margin-bottom: 20px;
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
+/* Buttons */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary,
+.btn-secondary {
+    background: #F3EEDC;
+    color: #8B4513;
+    box-shadow: 0 4px 15px rgba(243,238,220,0.3);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background: #EDE4D3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243,238,220,0.4);
+}
+
+/* ===========================
+   Features Section
+=========================== */
+.features {
+    padding: 100px 0;
+    background: #F3EEDC;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    max-width: 600px;
+    margin: auto;
+    color: #666;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-top: 4px solid #8B4513;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+}
+
+/* ===========================
+   About Section
+=========================== */
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #8B4513;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #F3EEDC, #EDE4D3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #8B4513;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Gallery Section
+=========================== */
+.gallery-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.gallery-section .section-title {
+    font-size: 2.2rem;
+    color: #8B4513;
+    font-weight: 700;
+}
+
+.gallery-section .section-subtitle {
+    color: #555;
+    margin-bottom: 40px;
+}
+
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 5%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-/* Kontak */
-.content {
-  text-align: center;
-  padding: 60px 5%;
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s ease;
 }
 
-.content h2 {
-  color: black;
-  font-size: 2em;
-  margin-bottom: 10px;
+.gallery-item img:hover {
+    transform: scale(1.08);
 }
 
-.contact-info {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: left;
-  line-height: 1.8;
+/* ===========================
+   Programs Section
+=========================== */
+.programs {
+    padding: 100px 0;
+    background: #F3EEDC;
 }
 
-.map-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.map {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-/* Section Program */
-.program-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 50px 5%;
+.programs-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .program-card {
-  background: #fff8e1;
-  border: 2px solid #F3EEDC;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: left;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
 .program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
 }
 
-.program-card h3 {
-  color: black;
-  margin-bottom: 10px;
+.program-image {
+    height: 200px;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
 }
 
-.program-card p {
-  color: #333;
-  line-height: 1.7;
-  font-size: 15px;
-}
-/* Buat layout agar footer selalu di bawah */
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+.program-content {
+    padding: 30px;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background-color: #fff;
+.program-content h3 {
+    font-size: 1.3rem;
+    color: #8B4513;
+    margin-bottom: 15px;
 }
 
-/* Pastikan konten utama mengisi ruang kosong */
-.content {
-  flex: 1;
-  padding: 80px 5%;
-  text-align: center;
-}
-/* Tombol WhatsApp Floating */
-.whatsapp-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 28px;
-  width: 60px;          /* lebar tombol */
-  height: 60px;         /* tinggi tombol sama dengan lebar */
-  border-radius: 50%;   /* membuat tombol bulat */
-  display: flex;         /* untuk memposisikan ikon di tengah */
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  z-index: 1000;
+/* ===========================
+   Contact Section
+=========================== */
+.contact {
+    padding: 100px 0;
 }
 
-.whatsapp-icon:hover {
-  background-color: #1ebe57;
-  transform: scale(1.1);
-}
-/* Tombol menu (hamburger) */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
+.contact-info {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item i {
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.contact-form {
+    background: #F3EEDC;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
     display: block;
-  }
+    font-weight: 500;
+    color: #8B4513;
+}
 
-  .nav-links {
-    display: none !important; /* ⛔ tambahkan !important */
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #fff;
-    flex-direction: column;
+.form-group input,
+.form-group textarea {
     width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 0 3px rgba(139,69,19,0.1);
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer-section h3 {
+    color: #F3EEDC;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #F3EEDC;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #8B4513;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #F3EEDC;
+    color: #8B4513;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
     text-align: center;
-    border-top: 1px solid #ddd;
-    transition: all 0.3s ease;
-  }
-
-  .nav-links.active {
-    display: flex !important; /* ✅ tambahkan !important juga */
-  }
-
-  .nav-links li {
-    padding: 15px 0;
-  }
-
-  .nav-links li a {
-    font-size: 18px;
-  }
-
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: #999;
 }
 
-/* Tombol Chatbot */
-.chatbot-btn {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  background-color: #FFD700;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 28px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 9999;
-}
-.chatbot-btn:hover {
-  background-color: #e6be00;
-  transform: scale(1.1);
-}
-
-/* Kotak Chatbot */
-.chatbot-container {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 320px;
-  max-height: 400px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 10000;
+/* ===========================
+   WhatsApp Floating Button
+=========================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 1000;
 }
 
-/* Header Chatbot */
-.chatbot-header {
-  background-color: #FFD700;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.whatsapp-float:hover {
+    transform: scale(1.1);
 }
 
-/* Isi Chatbot */
-.chatbot-messages {
-  padding: 10px;
-  flex-grow: 1;
-  overflow-y: auto;
+/* ===========================
+   Responsive (Tablet & Mobile)
+=========================== */
+@media (max-width: 768px) {
+
+    .nav-container {
+        height: 70px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        flex-direction: column;
+        background: linear-gradient(135deg, #8B4513, #A0522D);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text h1 {
+        font-size: 16px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.bot-message, .user-message {
-  margin: 5px 0;
-  padding: 8px 10px;
-  border-radius: 10px;
-  max-width: 80%;
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 120px 0 80px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 30px 25px;
+    }
 }
 
-.bot-message {
-  background: #f1f1f1;
-  align-self: flex-start;
+.contact-map {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.user-message {
-  background: #FFD700;
-  color: white;
-  align-self: flex-end;
+.contact-map h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
 }
 
-/* Input Chatbot */
-.chatbot-input {
-  display: flex;
-  border-top: 1px solid #ccc;
+.contact-map h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
 }
-
-.chatbot-input input {
-  flex: 1;
-  border: none;
-  padding: 10px;
-  outline: none;
-}
-
-.chatbot-input button {
-  background-color: #FFD700;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
